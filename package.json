@@ -1,19 +1,18 @@
 {
-  "name": "static-starter",
+  "name": "synthia",
   "private": true,
   "version": "1.0.0",
-  "description": "A starter template for building static sites.",
+  "description": "A web audio project.",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "eleventy",
-    "postbuild": "pagefind",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build -- --serve --incremental --ignore-initial"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ok-steve/static-starter.git"
+    "url": "git+https://github.com/ok-steve/synthia.git"
   },
   "keywords": [
     "eleventy"
@@ -25,13 +24,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ok-steve/static-starter/issues"
+    "url": "https://github.com/ok-steve/synthia/issues"
   },
-  "homepage": "https://github.com/ok-steve/static-starter#readme",
+  "homepage": "https://github.com/ok-steve/synthia#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
-    "pagefind": "^0.12.0",
     "rimraf": "^3.0.2"
   }
 }

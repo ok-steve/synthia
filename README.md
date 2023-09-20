@@ -1,3 +1,3 @@
-# static-starter
+# synthia
 
-A starter template for building static sites.
+A web audio project.
