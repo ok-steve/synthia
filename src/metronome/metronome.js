@@ -4,8 +4,6 @@ const bufferSource = ctx.createBufferSource();
 bufferSource.connect(ctx.destination);
 bufferSource.start();
 
-console.log('hello world3');
-
 function createSineBuffer() {
   const buf = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
   const channel = buf.getChannelData(0);
