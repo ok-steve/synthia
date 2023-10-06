@@ -2,6 +2,20 @@ const form = document.querySelector('form');
 const ctx = new AudioContext();
 const osc = new OscillatorNode(ctx);
 const gain = new GainNode(ctx, { gain: 0 });
+const notes = [
+  'C',
+  'C#/Db',
+  'D',
+  'D#Eb',
+  'E',
+  'F',
+  'F#/Gb',
+  'G',
+  'G#/Ab',
+  'A',
+  'A#/Bb',
+  'B',
+];
 
 function mtof(midi) {
   return 440.0 * Math.pow(2, (midi - 69) / 12);
@@ -29,7 +43,7 @@ async function render(keys) {
   const data = new FormData(form);
 
   if (!keys || keys.includes('octave') || keys.includes('note')) {
-    const note = 12 * +data.get('octave') + +data.get('note');
+    const note = 12 * +data.get('octave') + notes.indexOf(data.get('note'));
     osc.frequency.value = mtof(note);
   }
 
